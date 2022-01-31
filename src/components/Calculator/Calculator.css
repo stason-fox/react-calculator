@@ -1,0 +1,101 @@
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+}
+
+.calculator-grid > button {
+    font-size: 1.5rem;
+    border: 5px solid black;
+    outline: none;
+    cursor: pointer;
+}
+
+.calculator-grid > button:hover {
+    background-color: #61dbfb;
+}
+
+.clear,
+.c {
+    background-color: darkred;
+    color: white;
+}
+
+.clear:hover,
+.c:hover {
+    background-color: #61dbfb;
+    color: black;
+}
+
+.divide,
+.multiply,
+.subtract,
+.add,
+.equals {
+    background-color: mediumblue;
+    color: white;
+}
+
+.divide:hover,
+.multiply:hover,
+.subtract:hover,
+.add:hover,
+.equals:hover {
+    background-color: #61dbfb;
+    color: black;
+}
+
+.calculator-grid > button:active,
+.clear:active,
+.c:active,
+.divide:active,
+.multiply:active,
+.subtract:active,
+.add:active,
+.equals:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.25);
+}
+
+.display {
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.expression {
+    color: rgba(255, 255, 255, 0.75);
+    text-align: end;
+}
+
+.answer {
+    max-width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: end;
+}
+
+#span-two {
+    grid-column: span 2;
+}
+
+#lower-left {
+    grid-column: span 2;
+    border-radius: 0 0 0 0.5rem;
+}
+
+#lower-right {
+    border-radius: 0 0 0.5rem 0;
+}
